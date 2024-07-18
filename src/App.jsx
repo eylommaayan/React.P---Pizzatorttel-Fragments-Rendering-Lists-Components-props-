@@ -1,11 +1,13 @@
+// App.js
+
 import React from "react";
-import ReactDom from "react-dom/client";
+import Pizza from "./components/pizza/Pizza";
 
 function App() {
   return (
-    <>
-      <h1> שלום צבי הניניג'ה</h1>
-    </>
+    <div>
+      <Pizza />
+    </div>
   );
 }
 

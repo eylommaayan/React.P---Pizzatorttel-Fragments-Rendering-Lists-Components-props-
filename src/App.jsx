@@ -1,12 +1,11 @@
-// App.js
-
 import React from "react";
-import Pizza from "./components/pizza/Pizza";
+import { Pizza, Footer } from "./components/pizza/Pizza";
 
 function App() {
   return (
     <div>
       <Pizza />
+      <Footer />
     </div>
   );
 }

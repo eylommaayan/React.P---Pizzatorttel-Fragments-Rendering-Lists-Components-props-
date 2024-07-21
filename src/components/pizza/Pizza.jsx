@@ -5,26 +5,23 @@ import pizzaData from "./data";
 
 function Pizza() {
   return (
-    <div>
-      <h1 className="text-4xl font-bold text-center my-4">פיצה צבי הנינג'ה</h1>
-
-      <ul className="space-y-4">
+    <div className="p-8">
+      <h1 className="text-center text-5xl font-light uppercase tracking-wide relative inline-block after:block after:w-1/2 after:h-1 after:bg-yellow-500 after:mt-1 after:mb-2 after:mx-auto before:block before:w-1/2 before:h-1 before:bg-yellow-500 before:mb-1 before:mx-auto">
+        פיצה של צבי הנינג'ה
+      </h1>
+      <ul className="flex flex-col items-center gap-8">
         {pizzaData.map((pizza, index) => (
-          <li key={index} className="border p-4 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold">{pizza.name}</h2>
-            <p className="my-2">{pizza.ingredients}</p>
-            <p className="my-2 text-lg">Price: {pizza.price} ₪</p>
+          <li key={index} className="flex flex-col items-center">
+            <h2 className="text-3xl font-medium">{pizza.name}</h2>
+            <p className="text-xl">{pizza.ingredients}</p>
+            <p className="text-xl">Price: {pizza.price} ₪</p>
             <img
               src={pizza.photoName}
               alt={pizza.name}
-              className="w-full h-48 object-cover rounded-md"
+              className="w-full max-w-md rounded-lg shadow-md"
             />
-            <p className="my-2">
-              {pizza.soldOut ? (
-                <span className="text-red-500">Sold Out</span>
-              ) : (
-                <span className="text-green-500">Available</span>
-              )}
+            <p className="text-xl">
+              {pizza.soldOut ? "Sold Out" : "Available"}
             </p>
           </li>
         ))}
@@ -38,13 +35,13 @@ function Footer() {
   const openHour = 8;
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
-  console.log(isOpen);
+
   return (
-    <footer className="text-center my-4">
+    <footer className="text-center p-4">
       {isOpen ? (
-        <p className="text-green-500 text-lg">We are open!</p>
+        <p className="text-green-500">We are open!</p>
       ) : (
-        <p className="text-red-500 text-lg">Sorry, we are closed.</p>
+        <p className="text-red-500">Sorry, we are closed.</p>
       )}
     </footer>
   );

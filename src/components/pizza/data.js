@@ -17,16 +17,16 @@ const pizzaData = [
   },
   {
     name: "פיצה זיתים",
-    ingredients: "עגבניות, מוצרלה, וזיתים",
+    ingredients: "עגבניות, מוצרלה, עלים וזיתים",
     price: 45,
-    photoName: "pizzas/olive.jpg",
+    photoName: "pizzas/prosciutto.jpg",
     soldOut: false,
   },
   {
     name: "פיצה תירס",
-    ingredients: "עגבניות, מוצרלה, ותירס",
+    ingredients: "עגבניות, מוצרלה, ועוד גבינה על הגבינה",
     price: 42,
-    photoName: "pizzas/corn.jpg",
+    photoName: "pizzas/spinaci.jpg",
     soldOut: false,
   },
 ];
